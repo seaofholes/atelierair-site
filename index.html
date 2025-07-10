@@ -4,9 +4,58 @@
   <meta charset="UTF-8">
   <title>有限会社ロイヤルライフ | トップページ</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .main-visual {
+      position: relative;
+      width: 100%;
+      height: 55vh;
+      min-height: 320px;
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .main-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.83;
+      display: block;
+    }
+    .main-copy {
+      position: absolute;
+      left: 0; right: 0; top: 40%; text-align: center;
+      color: #fff;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.4);
+    }
+    .main-copy h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.14em;
+      margin: 0;
+    }
+    .main-copy p {
+      font-size: 1.2rem;
+      margin: 18px 0 0 0;
+    }
+    @media (max-width: 600px) {
+      .main-visual { height: 32vh; min-height: 150px;}
+      .main-copy h1 { font-size: 1.2rem;}
+      .main-copy p { font-size: 0.9rem;}
+    }
+    /* 事業紹介 */
+    .top-section {
+      margin: 40px auto 0;
+      max-width: 900px;
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(20,30,60,0.07);
+    }
+  </style>
 </head>
 <body>
-  <!-- ヘッダーここから -->
+  <!-- ヘッダー -->
   <header>
     <nav>
       <ul>
@@ -18,19 +67,34 @@
       </ul>
     </nav>
   </header>
-  <!-- ヘッダーここまで -->
-  <div class="container">
-    <h1>有限会社ロイヤルライフ</h1>
-    <p>不動産賃貸・管理、損害保険代理業、カルチャースクール、コンサート総合企画まで。<br>
-    多角的なサービスを通じて地域と共に歩む企業です。</p>
+  <!-- メインビジュアル -->
+ <div style="display:flex; gap:16px;">
+  <img src="rgv02"..." style="width:32%;">
+  <img src="rs07" alt="..." style="width:32%;">
+  <img src="sjun09" alt="..." style="width:32%;">
+  <img src="ikeda03"..." style="width:32%;">
+  <img src="senri05" alt="..." style="width:32%;">
+  <img src="sjun09" alt="..." style="width:32%;">
+  <img src="LM"..." style="width:32%;">
+  <img src="fto2" alt="..." style="width:32%;">
+  <img src="btun5" alt="..." style="width:32%;">
+  <img src="GK1" alt="..." style="width:32%;">
+</div>
+    <div class="main-copy">
+      <h1>有限会社ロイヤルライフ</h1>
+      <p>地域とともに、安心と彩りを。</p>
+    </div>
+  </div>
+  <!-- サブセクション -->
+  <section class="top-section">
     <h2>主な事業</h2>
     <ul>
-      <li>不動産賃貸および管理業務</li>
-      <li>損害保険代理店業務</li>
-      <li>カルチャースクール運営</li>
-      <li>コンサート・イベント企画</li>
+      <li>不動産賃貸および管理</li>
+      <li>損害保険代理店</li>
+      <li>カルチャースクール</li>
+      <li>コンサート総合企画</li>
     </ul>
     <p>資産管理や事業コンサルティングもご相談ください。</p>
-  </div>
+  </section>
 </body>
 </html>
