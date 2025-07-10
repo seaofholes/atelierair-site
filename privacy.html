@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <title>プライバシーポリシー | 有限会社ロイヤルライフ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="有限会社ロイヤルライフのプライバシーポリシーです。お客様の個人情報保護方針をご案内します。"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #CAB774;
+      --navy: #23304A;
+      --white: #fff;
+      --beige: #FAEBD7;
+    }
+    html { font-size: 10px;}
+    body {
+      font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+      background: #f8f8f8;
+      color: var(--navy);
+      margin: 0;
+      padding: 0;
+      font-size: 1.6rem;
+      line-height: 1.7;
+    }
+    /* ヘッダー */
+    .header {
+      width: 100vw;
+      background: var(--navy);
+      box-shadow: 0 4px 12px rgba(30,40,60,.07);
+      z-index: 100;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+    .nav-wrapper {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0;
+      height: 100%;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-left: 32px;
+    }
+    .site-icon {
+      height: 42px;
+      width: 42px;
+      object-fit: contain;
+      display: block;
+    }
+    .site-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.14em;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      height: 42px;
+    }
+    .nav-menu {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-right: 32px;
+    }
+    .nav-link {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.12rem; /* 0.7倍に */
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 6px;
+      transition: background .3s, color .3s;
+    }
+    .nav-link:hover, .nav-link.active {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    /* プライバシーポリシー本体 */
+    .policy-section {
+      max-width: 720px;
+      margin: 48px auto 60px auto;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(70,70,80,0.10);
+      padding: 36px 32px 36px 32px;
+    }
+    .policy-title {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      color: var(--navy);
+      border-left: 6px solid var(--gold);
+      padding-left: 16px;
+      margin-bottom: 28px;
+    }
+    .policy-section h2 {
+      font-size: 1.7rem;
+      color: var(--gold);
+      margin-top: 30px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .policy-section p, .policy-section ul {
+      font-size: 1.5rem;
+      color: #37425a;
+      margin: 0 0 12px 0;
+    }
+    .policy-section ul {
+      padding-left: 18px;
+      margin-bottom: 14px;
+    }
+    .policy-section li {
+      margin-bottom: 6px;
+      list-style: disc inside;
+    }
+    .policy-contact {
+      margin-top: 26px;
+      font-size: 1.25rem;
+      color: #595959;
+      background: #faf7ed;
+      border-left: 4px solid var(--gold);
+      padding: 14px 18px;
+      border-radius: 8px;
+    }
+    @media (max-width: 600px) {
+      .policy-section { padding: 14px 2vw; }
+      .policy-title { font-size: 1.7rem; }
+      .policy-section h2 { font-size: 1.2rem;}
+    }
+    /* フッター（共通） */
+    .footer {
+      width: 100vw;
+      background: var(--navy);
+      color: var(--white);
+      padding: 36px 0 18px 0;
+      margin-top: 0;
+    }
+    .footer-inner {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      display: flex;
+      align-items: flex-start;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-left: 32px;
+    }
+    .footer-icon {
+      height: 32px;
+      width: 32px;
+      object-fit: contain;
+      display: block;
+    }
+    .footer-brand-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .footer-site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .footer-contact {
+      font-size: 1.15rem;
+      color: var(--white);
+      line-height: 1.7;
+      margin: 0 0 10px 0;
+      padding-bottom: 0;
+      text-align: left;
+      display: block;
+    }
+    .footer-menu {
+      display: flex;
+      gap: 18px;
+      margin-left: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer-menu a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color .3s;
+      font-weight: 500;
+    }
+    .footer-menu a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+    .footer-cookie {
+      background: none;
+      text-align: center;
+      margin: 18px auto 0 auto;
+      padding: 12px 0 0 0;
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+    .footer-cookie button {
+      margin: 0 8px;
+      padding: 5px 16px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .3s, color .3s;
+    }
+    .footer-cookie button:hover {
+      background: var(--beige);
+      color: var(--navy);
+    }
+    #cookie-status {
+      margin-left: 16px;
+      font-weight: bold;
+      color: var(--gold);
+    }
+    .footer-policy-link {
+      text-align: center;
+      margin: 18px 0 0 0;
+      font-size: 1.1rem;
+    }
+    .footer-policy-link a {
+      color: var(--white);
+      opacity: 0.75;
+      font-size: 1.1rem;
+      text-decoration: underline;
+      transition: opacity .3s;
+    }
+    .footer-policy-link a:hover {
+      opacity: 1;
+      color: var(--gold);
+    }
+    .footer-copy {
+      margin-top: 8px;
+      text-align: center;
+      color: var(--gold);
+      font-size: 1.2rem;
+      letter-spacing: 0.03em;
+    }
+    @media (max-width: 900px) {
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-brand { margin-left: 12px;}
+      .footer-menu { margin-left: 12px;}
+    }
+    @media (max-width: 600px) {
+      .header, .footer, .footer-inner, .nav-wrapper { max-width: 100vw; padding-left: 0; padding-right: 0;}
+      .footer-site-title { font-size: 1.15rem;}
+      .footer-policy-link { font-size: 1rem;}
+    }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="nav-wrapper">
+      <div class="logo-title">
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="site-icon">
+        <span class="site-title">有限会社ロイヤルライフ</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">トップページ</a>
+        <a href="company.html" class="nav-link">会社概要</a>
+        <a href="properties.html" class="nav-link">物件情報</a>
+        <a href="news.html" class="nav-link">ニュース</a>
+        <a href="contact.html" class="nav-link">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- プライバシーポリシー本文 -->
+  <section class="policy-section">
+    <h1 class="policy-title">プライバシーポリシー</h1>
+    <p>有限会社ロイヤルライフ（以下「当社」）は、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築し、全従業員に個人情報保護の重要性の認識と取組みを徹底させることにより、個人情報の保護を推進致します。</p>
+
+    <h2>個人情報の管理</h2>
+    <p>当社は、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。</p>
+
+    <h2>個人情報の利用目的</h2>
+    <p>お客さまからお預かりした個人情報は、当社からのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。</p>
+
+    <h2>個人情報の第三者への開示・提供の禁止</h2>
+    <p>当社は、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。</p>
+    <ul>
+      <li>お客さまの同意がある場合</li>
+      <li>お客さまが希望されるサービスを行なうために当社が業務を委託する業者に対して開示する場合</li>
+      <li>法令に基づき開示することが必要である場合</li>
+    </ul>
+
+    <h2>個人情報の安全対策</h2>
+    <p>当社は、個人情報の正確性及び安全性確保のために、セキュリティに万全の対策を講じています。</p>
+
+    <h2>ご本人の照会</h2>
+    <p>お客さまがご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。</p>
+
+    <h2>法令、規範の遵守と見直し</h2>
+    <p>当社は、保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。</p>
+
+    <h2>お問い合せ</h2>
+    <div class="policy-contact">
+      当社の個人情報の取扱に関するお問い合せは下記までご連絡ください。<br>
+      <strong>有限会社ロイヤルライフ</strong><br>
+      〒560-0085 大阪府豊中市上新田3丁目6-17　ロイヤルグレイスヴィラ106<br>
+      TEL：06-6872-7040
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="footer-icon">
+        <div class="footer-brand-block">
+          <span class="footer-site-title">有限会社ロイヤルライフ</span>
+          <div class="footer-contact">
+            06-6872-7040<br>
+            〒560-0085<br>
+            大阪府豊中市上新田3丁目6-17
+          </div>
+        </div>
+      </div>
+      <nav class="footer-menu">
+        <a href="index.html">トップページ</a>
+        <a href="company.html">会社概要</a>
+        <a href="properties.html">物件情報</a>
+        <a href="news.html">ニュース</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="footer-cookie">
+      <span>Cookieの取得と利用に同意をお願いします。</span>
+      <button id="cookie-accept">同意</button>
+      <button id="cookie-reject">拒否</button>
+      <span id="cookie-status"></span>
+    </div>
+    <div class="footer-policy-link">
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+    <div class="footer-copy">
+      Copyright © 2025 有限会社ロイヤルライフ All rights Reserved.
+    </div>
+  </footer>
+  <!-- Cookie同意JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var status = document.getElementById('cookie-status');
+      var acceptBtn = document.getElementById('cookie-accept');
+      var rejectBtn = document.getElementById('cookie-reject');
+      if(!status) return;
+      acceptBtn.onclick = function() {
+        localStorage.setItem('cookie_agree', 'yes');
+        status.textContent = "（同意済み）";
+      };
+      rejectBtn.onclick = function() {
+        localStorage.setItem('cookie_agree', 'no');
+        status.textContent = "（拒否されました）";
+      };
+      if(localStorage.getItem('cookie_agree')==='yes') {
+        status.textContent = "（同意済み）";
+      } else if(localStorage.getItem('cookie_agree')==='no') {
+        status.textContent = "（拒否されました）";
+      }
+    });
+  </script>
+</body>
+</html>
