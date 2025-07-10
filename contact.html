@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>有限会社ロイヤルライフ | お問い合わせ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ヘッダー同上 -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="properties.html">物件情報</a></li>
+        <li><a href="news.html">ニュース</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>お問い合わせ</h1>
+    <form action="mailto:info@example.com" method="post" enctype="text/plain">
+      <label for="name">お名前：</label><br>
+      <input type="text" id="name" name="お名前" required><br><br>
+      <label for="email">メールアドレス：</label><br>
+      <input type="email" id="email" name="メールアドレス" required><br><br>
+      <label for="message">お問い合わせ内容：</label><br>
+      <textarea id="message" name="お問い合わせ内容" rows="6" required></textarea><br><br>
+      <button type="submit">送信</button>
+    </form>
+    <p>※個人情報の取り扱いについては会社概要ページをご参照ください。</p>
+  </div>
+</body>
+</html>
