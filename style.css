@@ -52,3 +52,31 @@ h1, h2 {
   header nav ul {flex-direction: column;}
   header nav ul li a {padding: 12px;}
 }
+
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 32px auto 0;
+  max-width: 900px;
+  padding: 0 12px;
+}
+.photo-gallery img {
+  width: 100%;
+  aspect-ratio: 1/1;     /* 正方形にトリミング。 */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(20,30,60,0.08);
+  background: #eee;
+}
+@media (max-width: 800px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+}
