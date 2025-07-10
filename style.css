@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', 'ヒラギノ角ゴ', Arial, sans-serif;
+  font-family: 'Montserrat', 'Futura', 'Arial', 'ヒラギノ角ゴ', 'Meiryo', sans-serif;
   background: #f7f8fa;
   color: #23304A;
   margin: 0;
@@ -26,34 +26,75 @@ header nav ul li a {
   text-decoration: none;
   font-weight: bold;
   transition: background .3s;
+  font-family: inherit;
 }
 header nav ul li a:hover {
   background: #B5985A;
   color: #23304A;
 }
 
-.container {
-  max-width: 900px;
-  margin: 40px auto 0;
-  padding: 32px 24px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 18px rgba(20,30,60,0.08);
+/* メインビジュアル */
+.main-visual {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  min-height: 320px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.main-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.83;
+  display: block;
+}
+.main-copy {
+  position: absolute;
+  left: 0; right: 0; top: 40%; text-align: center;
+  color: #fff;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.4);
+}
+.main-copy h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.14em;
+  margin: 0;
+  font-weight: 700;
+  font-family: inherit;
+}
+.main-copy p {
+  font-size: 1.2rem;
+  margin: 18px 0 0 0;
+  font-family: inherit;
 }
 
+@media (max-width: 600px) {
+  .main-visual { height: 32vh; min-height: 150px;}
+  .main-copy h1 { font-size: 1.2rem;}
+  .main-copy p { font-size: 0.9rem;}
+}
+
+/* 事業紹介セクション */
+.top-section {
+  margin: 40px auto 0;
+  max-width: 900px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(20,30,60,0.07);
+}
 h1, h2 {
   color: #23304A;
   border-left: 6px solid #B5985A;
   padding-left: 12px;
+  font-family: inherit;
+  font-weight: 700;
 }
 
-@media (max-width: 600px) {
-  .container {padding: 10px;}
-  header nav ul {flex-direction: column;}
-  header nav ul li a {padding: 12px;}
-}
-
-
+/* --- ▼ 写真ギャラリー追加スタイル ▼ --- */
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -64,7 +105,7 @@ h1, h2 {
 }
 .photo-gallery img {
   width: 100%;
-  aspect-ratio: 1/1;     /* 正方形にトリミング。 */
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(20,30,60,0.08);

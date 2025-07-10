@@ -1,20 +1,103 @@
-<div class="main-visual">
-  <img src="img/mainphoto.jpg" alt="ロイヤルライフの物件写真など">
-  <div class="main-copy">
-    <h1>有限会社ロイヤルライフ</h1>
-    <p>地域とともに、安心と彩りを。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>有限会社ロイヤルライフ | トップページ</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .main-visual {
+      position: relative;
+      width: 100%;
+      height: 55vh;
+      min-height: 320px;
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .main-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.83;
+      display: block;
+    }
+    .main-copy {
+      position: absolute;
+      left: 0; right: 0; top: 40%; text-align: center;
+      color: #fff;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.4);
+    }
+    .main-copy h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.14em;
+      margin: 0;
+    }
+    .main-copy p {
+      font-size: 1.2rem;
+      margin: 18px 0 0 0;
+    }
+    @media (max-width: 600px) {
+      .main-visual { height: 32vh; min-height: 150px;}
+      .main-copy h1 { font-size: 1.2rem;}
+      .main-copy p { font-size: 0.9rem;}
+    }
+    /* 事業紹介 */
+    .top-section {
+      margin: 40px auto 0;
+      max-width: 900px;
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(20,30,60,0.07);
+    }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="properties.html">物件情報</a></li>
+        <li><a href="news.html">ニュース</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- メインビジュアル -->
+  <div class="main-visual">
+    <img src="img/rgv02.jpg" alt="ロイヤルライフの物件写真など">
+    <div class="main-copy">
+      <h1>有限会社ロイヤルライフ</h1>
+      <p>地域とともに、安心と彩りを。</p>
+    </div>
   </div>
+<!-- 9枚の写真ギャラリー -->
+<div class="photo-gallery">
+  <img src="img/rgv02.jpg" alt="写真1">
+  <img src="img/rs07.jpg" alt="写真2">
+  <img src="img/sjun09.jpg" alt="写真3">
+  <img src="img/ikeda03.jpg" alt="写真4">
+  <img src="img/LM.jpg" alt="写真5">
+  <img src="img/senri05.jpg" alt="写真6">
+  <img src="img/fto2.jpg" alt="写真7">
+  <img src="img/btun5.jpg" alt="写真8">
+  <img src="img/GK1.png" alt="写真9">
 </div>
 
-<!-- 写真ギャラリー -->
-<div class="photo-gallery">
-  <img src="img/rgv02" alt="写真1">
-  <img src="img/rs07" alt="写真2">
-  <img src="img/sjun09" alt="写真3">
-  <img src="img/ikeda03" alt="写真4">
-  <img src="img/LM" alt="写真5">
-  <img src="img/senri05" alt="写真6">
-  <img src="img/fto2" alt="写真7">
-  <img src="img/btun5" alt="写真8">
-  <img src="img/GK1" alt="写真9">
-</div>
+  <!-- サブセクション -->
+  <section class="top-section">
+    <h2>主な事業</h2>
+    <ul>
+      <li>不動産賃貸および管理</li>
+      <li>損害保険代理店</li>
+      <li>カルチャースクール</li>
+      <li>コンサート総合企画</li>
+    </ul>
+    <p>資産管理や事業コンサルティングもご相談ください。</p>
+  </section>
+</body>
+</html>
