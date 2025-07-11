@@ -4,55 +4,117 @@
   <meta charset="utf-8"/>
   <title>物件情報 | 有限会社ロイヤルライフ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="有限会社ロイヤルライフの物件情報ページです。"/>
-  <!-- Google Fonts -->
+  <meta name="description" content="有限会社ロイヤルライフの物件情報。不動産賃貸・管理の賃貸物件をご紹介します。"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1.1">
   <style>
-    :root { --gold: #CAB774; --navy: #23304A; --white: #fff; --beige: #FAEBD7; }
-    html { font-size: 10px;}
-    body { font-family: 'Montserrat', 'Noto Sans JP', sans-serif; background: #f8f8f8; color: var(--navy); margin: 0; padding: 0; font-size: 1.6rem; line-height: 1.7; box-sizing: border-box;}
-    .header { width: 100vw; min-width: 0; background: var(--navy); box-shadow: 0 4px 12px rgba(30,40,60,.07); z-index: 100; min-height: 120px; display: flex; align-items: center; padding: 0;}
-    .nav-wrapper { width: 100vw; max-width: 100vw; margin: 0; display: flex; align-items: center; justify-content: space-between; padding: 0; height: 100%;}
-    .logo-title { display: flex; align-items: center; gap: 12px; margin-left: 32px;}
-    .site-icon { height: 42px; width: 42px; object-fit: contain; display: block;}
-    .site-title { font-size: 2.2rem; font-weight: 700; color: var(--gold); letter-spacing: 0.14em; line-height: 1; display: flex; align-items: center; height: 42px;}
-    .nav-menu { display: flex; gap: 12px; align-items: center; margin-right: 32px; flex-wrap: wrap;}
-    .nav-link { color: var(--white); text-decoration: none; font-size: 1.12rem; font-weight: 500; padding: 10px 12px; border-radius: 6px; transition: background .3s, color .3s; white-space: nowrap;}
-    .nav-link:hover, .nav-link.active { background: var(--gold); color: var(--navy);}
-    .property-section { max-width: 700px; background: var(--white); margin: 48px auto 48px auto; border-radius: 16px; box-shadow: 0 2px 16px rgba(70,70,80,0.10); padding: 40px 32px 36px 32px;}
-    .property-title { font-size: 2.6rem; font-weight: 700; color: var(--navy); letter-spacing: 0.13em; border-left: 6px solid var(--gold); padding-left: 16px; margin-bottom: 28px;}
-    .property-list { list-style: none; padding: 0; margin: 0 0 22px 0;}
-    .property-item { margin-bottom: 28px; }
-    .property-name { font-size: 1.6rem; font-weight: 700; color: var(--gold);}
-    .property-info { font-size: 1.4rem; margin: 6px 0 4px 0; color: #37425a;}
-    .property-features { font-size: 1.3rem; color: #595959;}
-    .property-caption { color: #595959; font-size: 1.3rem; margin-top: 22px;}
-    @media (max-width: 600px) {
-      .property-section { padding: 18px 2vw;}
-      .property-title { font-size: 1.4rem;}
-      .property-name { font-size: 1.16rem;}
-      .property-info { font-size: 1.10rem;}
-      .property-features, .property-caption { font-size: 1.0rem;}
+    /* 下記は .property-table, .main-box のみ記載。他は共通CSSでOK */
+    .main-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 0 60px 0;
+      background: #f8f8f8;
+      min-height: 60vh;
     }
-    /* フッター（同じ） */
-    .footer { width: 100vw; background: var(--navy); color: var(--white); padding: 36px 0 18px 0; margin-top: 0;}
-    .footer-inner { width: 100vw; max-width: 100vw; margin: 0; display: flex; align-items: flex-start; padding: 0; flex-wrap: wrap;}
-    .footer-brand { display: flex; align-items: flex-start; gap: 12px; margin-left: 32px;}
-    .footer-icon { height: 32px; width: 32px; object-fit: contain; display: block;}
-    .footer-brand-block { display: flex; flex-direction: column; align-items: flex-start;}
-    .footer-site-title { font-size: 1.8rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 10px;}
-    .footer-contact { font-size: 1.15rem; color: var(--white); line-height: 1.7; margin: 0 0 10px 0; padding-bottom: 0; text-align: left; display: block; word-break: break-all;}
-    .footer-menu { display: flex; gap: 18px; margin-left: 32px; align-items: center; flex-wrap: wrap;}
-    .footer-menu a { color: var(--white); text-decoration: none; font-size: 1.1rem; transition: color .3s; font-weight: 500; white-space: nowrap;}
-    .footer-menu a:hover { color: var(--gold); text-decoration: underline;}
-    .footer-cookie { background: none; text-align: center; margin: 18px auto 0 auto; padding: 12px 0 0 0; font-size: 1.1rem; color: var(--white);}
-    .footer-cookie button { margin: 0 8px; padding: 5px 16px; border-radius: 6px; border: none; font-size: 1rem; background: var(--gold); color: var(--navy); font-weight: 600; cursor: pointer; transition: background .3s, color .3s;}
-    .footer-cookie button:hover { background: var(--beige); color: var(--navy);}
-    #cookie-status { margin-left: 16px; font-weight: bold; color: var(--gold);}
-    .footer-policy-link { text-align: center; margin: 18px 0 0 0; font-size: 1.1rem;}
-    .footer-policy-link a { color: var(--white); opacity: 0.75; font-size: 1.1rem; text-decoration: underline; transition: opacity .3s;}
-    .footer-policy-link a:hover { opacity: 1; color: var(--gold);}
-    .footer-copy { margin-top: 8px; text-align: center; color: var(--gold); font-size: 1.2rem; letter-spacing: 0.03em;}
+    .main-box {
+      width: 100%;
+      max-width: 680px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(70,70,80,0.09);
+      padding: 44px 28px 38px 28px;
+      margin: 0 8px;
+    }
+    .company-title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      border-left: 6px solid #CAB774;
+      color: #23304A;
+      padding-left: 16px;
+      margin-bottom: 32px;
+      letter-spacing: 0.12em;
+      text-align: left;
+    }
+    .property-block:not(:last-child) {
+      margin-bottom: 34px;
+    }
+    .property-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #23304A;
+      margin-bottom: 16px;
+      margin-top: 0;
+      letter-spacing: 0.08em;
+      border-left: 4px solid #CAB774;
+      padding-left: 10px;
+    }
+    .property-table {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .property-table .row {
+      display: flex;
+      border-bottom: 1px solid #eee;
+      padding: 6px 0;
+    }
+    .property-table dt, .property-table dd {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+    }
+    .property-table dt {
+      min-width: 84px;
+      font-weight: 600;
+      color: #23304A;
+      flex-shrink: 0;
+    }
+    .property-table dd {
+      flex: 1;
+      color: #37425a;
+      margin-left: 12px;
+      word-break: break-word;
+    }
+    .property-caption {
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 18px;
+      margin-bottom: 0;
+    }
+    .property-caption a {
+      color: #23304A;
+      text-decoration: underline;
+    }
+    /* フッターのアイコン調整（32px） */
+    .footer-icon {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .main-box {
+        padding: 16px 3vw 18px 3vw;
+      }
+      .company-title {
+        font-size: 1.25rem;
+        padding-left: 10px;
+        margin-bottom: 18px;
+      }
+      .property-name {
+        font-size: 1.02rem;
+        padding-left: 6px;
+      }
+      .property-table dt, .property-table dd {
+        font-size: 0.98rem;
+      }
+      .footer-icon {
+        width: 27px;
+        height: 27px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -72,58 +134,58 @@
       </nav>
     </div>
   </header>
-  <!-- 物件情報本文 -->
-  <section class="property-section">
-    <h1 class="property-title">物件情報</h1>
-    <ul class="property-list">
-      <li class="property-item">
-        <span class="property-name">● ロイヤルグレイスヴィラ（ROYAL GRACE VILLA）</span><br>
-        <span class="property-info">
-          所在地：大阪府豊中市<br>
-          間取り：3LDK / 50.0㎡<br>
-          築年数：1989年築
-        </span><br>
-        <span class="property-features">
-          駅近、駐車場有、貸しスタジオ有、ゲストルーム有
-        </span>
-      </li>
-      <li class="property-item">
-        <span class="property-name">● ザ ・千里タワー（THE SENRI TOWER）</span><br>
-        <span class="property-info">
-          所在地：大阪府豊中市<br>
-          間取り：3LDK / 92.0㎡<br>
-          築年数：2009年築
-        </span><br>
-        <span class="property-features">
-          24時間ゴミ出し可、セキュリティ完備、ペット飼育可
-        </span>
-      </li>
-    </ul>
-    <div class="property-caption">
-      その他の物件情報は、お問い合わせよりご相談ください。
-    </div>
-  </section>
-  <!-- フッター -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="footer-icon">
-        <div class="footer-brand-block">
-          <span class="footer-site-title">有限会社ロイヤルライフ</span>
-          <div class="footer-contact">
-            06-6872-7040<br>
-            営業時間：10:00～17:00<br>
-            大阪府豊中市上新田3丁目6-17
+  <!-- 本文 -->
+  <main>
+    <section class="main-section">
+      <div class="main-box">
+        <h1 class="company-title">物件情報</h1>
+        <div class="property-list">
+          <div class="property-block">
+            <h2 class="property-name">ロイヤルグレイスヴィラ（ROYAL GRACE VILLA）</h2>
+            <dl class="property-table">
+              <div class="row"><dt>所在地</dt><dd>大阪府豊中市</dd></div>
+              <div class="row"><dt>間取り</dt><dd>3LDK / 50.0㎡</dd></div>
+              <div class="row"><dt>築年数</dt><dd>1989年築</dd></div>
+              <div class="row"><dt>特徴</dt><dd>駅近、駐車場有、貸しスタジオ有、ゲストルーム有</dd></div>
+            </dl>
+          </div>
+          <div class="property-block">
+            <h2 class="property-name">ザ ・千里タワー（THE SENRI TOWER）</h2>
+            <dl class="property-table">
+              <div class="row"><dt>所在地</dt><dd>大阪府豊中市</dd></div>
+              <div class="row"><dt>間取り</dt><dd>3LDK / 92.0㎡</dd></div>
+              <div class="row"><dt>築年数</dt><dd>2009年築</dd></div>
+              <div class="row"><dt>特徴</dt><dd>24時間ゴミ出し可、セキュリティ完備、ペット飼育可</dd></div>
+            </dl>
+          </div>
+          <div class="property-caption">
+            その他の物件情報は、<a href="contact.html">お問い合わせ</a>よりご相談ください。
           </div>
         </div>
       </div>
-      <nav class="footer-menu">
-        <a href="index.html">トップページ</a>
-        <a href="company.html">会社概要</a>
-        <a href="properties.html">物件情報</a>
-        <a href="news.html">ニュース</a>
-        <a href="contact.html">お問い合わせ</a>
-      </nav>
+    </section>
+  </main>
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-menu-row">
+        <nav class="footer-menu">
+          <a href="index.html">トップページ</a>
+          <a href="company.html">会社概要</a>
+          <a href="properties.html">物件情報</a>
+          <a href="news.html">ニュース</a>
+          <a href="contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+      <div class="footer-brand-row">
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="footer-icon">
+        <span class="footer-site-title">有限会社ロイヤルライフ</span>
+      </div>
+      <div class="footer-contact">
+        〒560-0085<br>
+        06-6872-7040<br>
+        大阪府豊中市上新田3丁目6-17
+      </div>
     </div>
     <div class="footer-cookie">
       <span>Cookieの取得と利用に同意をお願いします。</span>
@@ -138,7 +200,6 @@
       Copyright © 2025 有限会社ロイヤルライフ All rights Reserved.
     </div>
   </footer>
-  <!-- Cookie同意JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var status = document.getElementById('cookie-status');
