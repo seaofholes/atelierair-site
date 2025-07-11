@@ -90,85 +90,101 @@
       background: var(--gold);
       color: var(--navy);
     }
-    /* 本文（会社概要） */
-    .main-section {
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      margin-right: calc(50% - 50vw);
-      background: var(--white);
-      padding: 64px 0 64px 0;
-      box-shadow: 0 2px 16px rgba(70,70,80,0.06);
-    }
-    .company-inner {
-      max-width: 680px;
-      margin: 0 auto;
-      background: var(--white);
-      border-radius: 14px;
-      box-shadow: 0 2px 8px rgba(40,40,60,0.06);
-      padding: 40px 24px;
-    }
-    .company-title {
-      font-size: 2.4rem;
-      font-weight: 700;
-      border-left: 6px solid var(--gold);
-      color: var(--navy);
-      padding-left: 16px;
-      margin-bottom: 32px;
-      letter-spacing: 0.13em;
-      text-align: left;
-      display: inline-block;
-  width: 100%;         /* ← ここを追加 */
-  max-width: 680px;    /* ← ここを追加（.company-infoと合わせる） */
-  margin-left: auto;   /* 追加 */
-  margin-right: auto;  /* 追加 */
-    }
-    .company-info {
-      margin: 0 auto;
-      text-align: left;
-      display: table;
-    }
-    .company-info dl {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .company-info dt, .company-info dd {
-      font-size: 1.55rem;
-      padding: 7px 0;
-      border-bottom: 1px solid #e5e5e5;
-      vertical-align: top;
-      margin: 0;
-      line-height: 1.7;
-      display: inline-block;
-    }
-    .company-info dt {
-      width: 140px;
-      font-weight: 700;
-      background: #f8f8f8;
-      padding-left: 18px;
-      color: var(--navy);
-    }
-    .company-info dd {
-      width: calc(100% - 140px);
-      padding-left: 18px;
-      color: #2c3b56;
-    }
-    .company-info .row {
-      display: flex;
-      width: 100%;
-    }
-    @media (max-width: 600px) {
-      .main-section, .company-inner { padding: 16px 0;}
-      .company-inner { padding: 14px 2vw;}
-      .company-title { font-size: 1.45rem; padding-left: 8px;}
-      .company-info dt, .company-info dd { font-size: 1.15rem; padding: 4px 0;}
-      .company-info dt { width: 95px; padding-left: 6px;}
-      .company-info dd { width: calc(100% - 95px); padding-left: 10px;}
-    }
+
+
+/* 本文 */
+.main-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: var(--white);
+  padding: 54px 0 54px 0;
+}
+
+.company-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 4px 24px rgba(40,40,60,0.12);  
+  padding: 32px 16px 38px 16px;
+}
+
+.company-title {
+  font-size: 2.0rem;        
+  font-weight: 700;
+  border-left: 6px solid var(--gold);
+  color: var(--navy);
+  padding-left: 16px;
+  margin-bottom: 28px;
+  letter-spacing: 0.13em;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.company-info dt, .company-info dd {
+  font-size: 1.20rem;         
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e5e5;
+  vertical-align: top;
+  margin: 0;
+  line-height: 1.7;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .main-section, .company-inner { padding: 8px 0;}
+  .company-inner { padding: 10px 2vw;}
+  .company-title { font-size: 1.15rem; padding-left: 7px;}
+  .company-info dt, .company-info dd { font-size: 0.97rem; padding: 4px 0;}
+  .company-info dt { width: 95px; padding-left: 6px;}
+  .company-info dd { width: calc(100% - 95px); padding-left: 10px;}
+}
+
+.company-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-bottom: 0;
+  font-size: 1.18rem;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: none;
+}
+.company-info-table th,
+.company-info-table td {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 13px 12px;
+  text-align: left;
+  vertical-align: top;
+  font-weight: 400;
+}
+.company-info-table th {
+  width: 125px;
+  background: #f8f8f8;
+  color: var(--navy);
+  font-weight: 700;
+}
+.company-info-table td {
+  color: #2c3b56;
+}
+.company-info-table tr:last-child th,
+.company-info-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  .company-info-table { font-size: 0.97rem; }
+  .company-info-table th { width: 80px; padding: 7px 6px; }
+  .company-info-table td { padding: 7px 6px; }
+}
+
+
     /* フッター */
     .footer {
       width: 100vw;
@@ -327,58 +343,56 @@
     </div>
   </header>
 
-  <!-- 本文 -->
-  <section class="main-section">
-    <div class="company-inner">
-      <h1 class="company-title">会社概要</h1>
-      <div class="company-info">
-        <dl>
-          <div class="row">
-            <dt>会社名</dt>
-            <dd>有限会社ロイヤルライフ</dd>
-          </div>
-          <div class="row">
-            <dt>代表</dt>
-            <dd>池田 佳子</dd>
-          </div>
-          <div class="row">
-            <dt>設立</dt>
-            <dd>平成元年8月</dd>
-          </div>
-          <div class="row">
-            <dt>所在地</dt>
-            <dd>〒560-0085<br>大阪府豊中市上新田3丁目6-17<br>ロイヤルグレイスヴィラ106</dd>
-          </div>
-          <div class="row">
-            <dt>TEL</dt>
-            <dd>06-6872-7040</dd>
-          </div>
-          <div class="row">
-            <dt>FAX</dt>
-            <dd>06-6872-7384</dd>
-          </div>
-          <div class="row">
-            <dt>営業時間</dt>
-            <dd>10:00～17:00</dd>
-          </div>
-          <div class="row">
-            <dt>定休日</dt>
-            <dd>不定休</dd>
-          </div>
-          <div class="row">
-            <dt>事業内容</dt>
-            <dd>
-              不動産賃貸および管理<br>
-              損害保険代理店<br>
-              カルチャースクール<br>
-              コンサート総合企画<br>
-              等々
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-  </section>
+  <!-- 本文 --><section class="main-section">
+  <div class="company-inner">
+    <h1 class="company-title">会社概要</h1>
+    <table class="company-info-table">
+      <tr>
+        <th>会社名</th>
+        <td>有限会社ロイヤルライフ</td>
+      </tr>
+      <tr>
+        <th>代表</th>
+        <td>池田 佳子</td>
+      </tr>
+      <tr>
+        <th>設立</th>
+        <td>平成元年8月</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>〒560-0085<br>大阪府豊中市上新田3丁目6-17<br>ロイヤルグレイスヴィラ106</td>
+      </tr>
+      <tr>
+        <th>TEL</th>
+        <td>06-6872-7040</td>
+      </tr>
+      <tr>
+        <th>FAX</th>
+        <td>06-6872-7384</td>
+      </tr>
+      <tr>
+        <th>営業時間</th>
+        <td>10:00～17:00</td>
+      </tr>
+      <tr>
+        <th>定休日</th>
+        <td>不定休</td>
+      </tr>
+      <tr>
+        <th>事業内容</th>
+        <td>
+          不動産賃貸および管理<br>
+          損害保険代理店<br>
+          カルチャースクール<br>
+          コンサート総合企画<br>
+          等々
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+
 
   <!-- フッター -->
   <footer class="footer">
