@@ -4,76 +4,10 @@
   <meta charset="utf-8"/>
   <title>会社概要 | 有限会社ロイヤルライフ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="有限会社ロイヤルライフの会社概要です。会社の基本情報や所在地、設立年、事業内容などをご案内します。"/>
+  <meta name="description" content="有限会社ロイヤルライフの会社概要ページです。大阪府豊中市の不動産賃貸、管理、カルチャースクールなど多角的に展開。"/>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ------ 追加/上書きスタイル ------ */
-    .footer-brand-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      flex-wrap: wrap;
-      margin-top: 30px;
-      gap: 10px;
-    }
-    .footer-brand-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-width: 180px;
-    }
-    .footer-menu {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-      flex-wrap: wrap;
-    }
-    .footer-menu a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: color .3s;
-      opacity: 0.92;
-    }
-    .footer-menu a:hover {
-      color: var(--gold);
-      text-decoration: underline;
-      opacity: 1;
-    }
-    .footer-contact {
-      font-size: 1.15rem;
-      color: var(--white);
-      line-height: 1.7;
-      width: 100%;
-      text-align: left;
-      margin: 18px 0 12px 0;
-      padding-bottom: 0;
-    }
-    .footer-contact-tel {
-      margin-top: 10px;
-      display: block;
-    }
-    @media (max-width: 700px) {
-      .footer-brand-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      .footer-menu {
-        flex-wrap: wrap;
-        margin-top: 10px;
-        margin-left: 0;
-        padding-left: 0;
-      }
-      .footer-brand-left {
-        margin-bottom: 4px;
-      }
-    }
-  </style>
 </head>
 <body>
   <!-- ヘッダー -->
@@ -93,79 +27,56 @@
     </div>
   </header>
 
-  <!-- 会社概要 -->
-  <section class="company-section">
-    <h1 class="company-title">会社概要</h1>
-    <table class="company-table">
-      <tr>
-        <th>会社名</th>
-        <td>有限会社ロイヤルライフ</td>
-      </tr>
-      <tr>
-        <th>代表</th>
-        <td>池田 佳子</td>
-      </tr>
-      <tr>
-        <th>設立</th>
-        <td>平成元年8月</td>
-      </tr>
-      <tr>
-        <th>所在地</th>
-        <td>〒560-0085<br>大阪府豊中市上新田3丁目6-17<br>ロイヤルグレイスヴィラ106</td>
-      </tr>
-      <tr>
-        <th>TEL</th>
-        <td>06-6872-7040</td>
-      </tr>
-      <tr>
-        <th>FAX</th>
-        <td>06-6872-7384</td>
-      </tr>
-      <tr>
-        <th>定休日</th>
-        <td>不定休</td>
-      </tr>
-      <tr>
-        <th>事業内容</th>
-        <td>
-          不動産賃貸および管理<br>
-          損害保険代理店<br>
-          カルチャースクール<br>
-          コンサート総合企画<br>
-          等々
-        </td>
-      </tr>
-    </table>
-  </section>
+  <main>
+<div class="main-content">
+<section class="page-section">
+  <h1 class="section-title">会社概要</h1>
+  <dl class="company-info">
+    <div class="row"><dt>会社名</dt><dd>有限会社ロイヤルライフ</dd></div>
+    <div class="row"><dt>代表</dt><dd>池田 佳子</dd></div>
+    <div class="row"><dt>設立</dt><dd>平成元年8月</dd></div>
+    <div class="row"><dt>所在地</dt><dd>大阪府豊中市上新田3丁目6-17 ロイヤルグレイスヴィラ106</dd></div>
+    <div class="row"><dt>TEL</dt><dd>06-6872-7040</dd></div>
+    <div class="row"><dt>FAX</dt><dd>06-6872-7384</dd></div>
+    <div class="row"><dt>営業時間</dt><dd>10:00～17:00</dd></div>
+    <div class="row"><dt>定休日</dt><dd>不定休</dd></div>
+    <div class="row"><dt>事業内容</dt>
+      <dd>
+        不動産賃貸および管理<br>
+        損害保険代理店<br>
+        カルチャースクール<br>
+        コンサート総合企画<br>
+        等々
+      </dd>
+    </div>
+</div>
+  </dl>
+</section>
+
+  </main>
 
   <!-- フッター -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand-row">
-        <div class="footer-brand-left">
-          <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="site-icon">
-          <span class="footer-site-title">有限会社ロイヤルライフ</span>
-        </div>
-        <nav class="footer-menu">
-          <a href="index.html">トップページ</a>
-          <a href="company.html" class="active">会社概要</a>
-          <a href="properties.html">物件情報</a>
-          <a href="news.html">ニュース</a>
-          <a href="contact.html">お問い合わせ</a>
-        </nav>
+      <!-- メニュー（中央） -->
+      <div class="footer-menu-row">
+        <a href="index.html">トップページ</a>
+        <a href="company.html">会社概要</a>
+        <a href="properties.html">物件情報</a>
+        <a href="news.html">ニュース</a>
+        <a href="contact.html">お問い合わせ</a>
       </div>
-  <div class="footer-contact">
-  <span>〒560-0085</span><br>
-  <span>06-6872-7040</span><br>
-  <span>大阪府豊中市上新田3丁目6-17</span>
-</div>
-
-    </div>
-    <div class="footer-cookie">
-      <span>Cookieの取得と利用に同意をお願いします。</span>
-      <button id="cookie-accept">同意</button>
-      <button id="cookie-reject">拒否</button>
-      <span id="cookie-status"></span>
+      <!-- ブランド・会社名（左寄せ） -->
+      <div class="footer-brand-row">
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="site-icon">
+        <span class="footer-site-title">有限会社ロイヤルライフ</span>
+      </div>
+      <!-- 会社情報（左寄せ） -->
+      <div class="footer-contact">
+        <span>〒560-0085</span>
+        <span style="margin-top:5px; margin-bottom:3px;">06-6872-7040</span>
+        <span>大阪府豊中市上新田3丁目6-17</span>
+      </div>
     </div>
     <div class="footer-policy-link">
       <a href="privacy.html">プライバシーポリシー</a>
@@ -174,27 +85,5 @@
       Copyright © 2025 有限会社ロイヤルライフ All rights Reserved.
     </div>
   </footer>
-  <!-- Cookie同意JS -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var status = document.getElementById('cookie-status');
-      var acceptBtn = document.getElementById('cookie-accept');
-      var rejectBtn = document.getElementById('cookie-reject');
-      if(!status) return;
-      acceptBtn.onclick = function() {
-        localStorage.setItem('cookie_agree', 'yes');
-        status.textContent = "（同意済み）";
-      };
-      rejectBtn.onclick = function() {
-        localStorage.setItem('cookie_agree', 'no');
-        status.textContent = "（拒否されました）";
-      };
-      if(localStorage.getItem('cookie_agree')==='yes') {
-        status.textContent = "（同意済み）";
-      } else if(localStorage.getItem('cookie_agree')==='no') {
-        status.textContent = "（拒否されました）";
-      }
-    });
-  </script>
 </body>
 </html>

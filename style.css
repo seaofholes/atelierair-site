@@ -3,57 +3,62 @@
   --navy: #23304A;
   --white: #fff;
   --beige: #FAEBD7;
+  --gray-text: #37425a;
 }
-html { font-size: 10px; }
+
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
   background: #f8f8f8;
   color: var(--navy);
   margin: 0;
   padding: 0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 1.7;
 }
+
+.main-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+/* ヘッダー */
 .header {
-  width: 100%;
+  width: 100vw;
   background: var(--navy);
   box-shadow: 0 4px 12px rgba(30,40,60,.07);
   z-index: 100;
-  min-height: 90px; /* 1.7倍くらいに太く */
-  display: flex;
-  align-items: center;
+  min-height: 80px;
 }
 .nav-wrapper {
-  width: 100%;
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 24px;
-  padding-right: 24px;
-  box-sizing: border-box;
-  min-height: 90px;
+  padding: 0 20px;
+  min-height: 80px;
 }
 .logo-title {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 .site-icon {
-  height: 44px;
-  width: 44px;
+  height: 28px;
+  width: 28px;
   object-fit: contain;
   display: block;
 }
 .site-title {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: 0.14em;
-  height: 44px;
-  display: flex;
-  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.11em;
 }
 .nav-menu {
   display: flex;
@@ -63,9 +68,9 @@ body {
 .nav-link {
   color: var(--white);
   text-decoration: none;
-  font-size: 1.1rem; /* 0.7倍 */
-  font-weight: 500;
-  padding: 9px 13px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 8px 12px;
   border-radius: 6px;
   transition: background .3s, color .3s;
 }
@@ -74,149 +79,124 @@ body {
   color: var(--navy);
 }
 
-/* 本文（例：会社概要） */
-.company-section {
-  max-width: 700px;
-  margin: 48px auto 60px auto;
-  background: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(70,70,80,0.10);
-  padding: 36px 32px 36px 32px;
-}
-.company-title {
-  font-size: 2.6rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  color: var(--navy);
-  border-left: 6px solid var(--gold);
-  padding-left: 16px;
-  margin-bottom: 28px;
-}
-.company-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 18px;
-  font-size: 1.6rem;
-}
-.company-table th, .company-table td {
-  text-align: left;
-  vertical-align: top;
-  padding: 8px 8px 8px 0;
-}
-.company-table th {
-  color: var(--gold);
-  width: 140px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.company-table td {
-  color: #37425a;
-}
+/* レスポンシブメニュー（スマホ） */
 @media (max-width: 800px) {
-  .company-section {
-    max-width: 98vw;
-    padding: 18px 2vw;
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 6vw;
+    min-height: unset;
+    height: auto;
   }
-}
-@media (max-width: 600px) {
-  .nav-wrapper, .footer-inner {
-    padding-left: 8px;
-    padding-right: 8px;
+  .logo-title {
+    justify-content: flex-start;
+    margin-top: 12px;
+    margin-bottom: 6px;
   }
-  .company-section {
-    padding: 14px 2vw;
+  .nav-menu {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
   }
-  .site-title {
-    font-size: 1.6rem;
-    height: 32px;
-  }
-  .site-icon {
-    height: 32px;
-    width: 32px;
-  }
+  .site-title { font-size: 1.25rem;}
+  .site-icon { height: 22px; width: 22px;}
 }
 
 /* フッター */
 .footer {
-  width: 100%;
+  width: 100vw;
   background: var(--navy);
   color: var(--white);
-  padding: 0;
+  padding: 30px 0 16px 0;
   margin-top: 0;
 }
 .footer-inner {
-  width: 100%;
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-left: 24px;
-  padding-right: 24px;
-  box-sizing: border-box;
+  align-items: flex-start;
 }
-.footer-brand-row {
+.footer-menu-row {
   display: flex;
   align-items: center;
-  gap: 10px;
   width: 100%;
-  justify-content: flex-start;
-  margin-top: 30px;
+  gap: 14px;
+  margin-bottom: 4px;
+  justify-content: center; /* 追加：横方向中央揃え */
 }
-.footer-site-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: 0.1em;
-  display: flex;
-  align-items: center;
-}
-.footer-contact {
+
+.footer-menu-row a {
+  color: #fff !important;
+  text-decoration: none;
   font-size: 1.15rem;
-  color: var(--white);
-  line-height: 1.2;
-  width: 100%;
-  text-align: left;
-  margin: 18px 0 12px 0;
-  padding-bottom: 0;
 }
+
+.footer-menu-row a:visited,
+.footer-menu-row a:active,
+.footer-menu-row a:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
 
 .footer-menu {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  margin: 18px 0 0 0;
-  padding: 0;
-  width: 100%;
+  gap: 15px;
 }
 .footer-menu a {
   color: var(--white);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   transition: color .3s;
-  opacity: 0.92;
 }
 .footer-menu a:hover {
   color: var(--gold);
   text-decoration: underline;
-  opacity: 1;
+}
+.footer-brand-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 14px;
+  margin-bottom: 0;
+}
+.footer-site-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.07em;
+  margin-right: 18px;
+}
+.footer-contact {
+  font-size: 1.1rem;
+  color: var(--white);
+  line-height: 1.4;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+.footer-contact span {
+  display: block;
+  margin: 0;
 }
 .footer-cookie {
   background: none;
   text-align: center;
-  margin: 16px auto 0 auto;
+  margin: 14px auto 0 auto;
   padding: 10px 0 0 0;
-  font-size: 1.0rem;
+  font-size: 1rem;
   color: var(--white);
 }
 .footer-cookie button {
-  margin: 0 8px;
-  padding: 5px 16px;
+  margin: 0 6px;
+  padding: 5px 14px;
   border-radius: 6px;
   border: none;
-  font-size: 1rem;
+  font-size: 0.97rem;
   background: var(--gold);
   color: var(--navy);
   font-weight: 600;
@@ -227,20 +207,15 @@ body {
   background: var(--beige);
   color: var(--navy);
 }
-#cookie-status {
-  margin-left: 12px;
-  font-weight: bold;
-  color: var(--gold);
-}
 .footer-policy-link {
   text-align: center;
   margin: 10px 0 0 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 .footer-policy-link a {
   color: var(--white);
   opacity: 0.7;
-  font-size: 1.05rem;
+  font-size: 1rem;
   text-decoration: underline;
   transition: opacity .3s;
 }
@@ -249,25 +224,89 @@ body {
   color: var(--gold);
 }
 .footer-copy {
-  margin-top: 6px;
+  margin-top: 8px;
   text-align: center;
   color: var(--gold);
-  font-size: 1.2rem;
-  letter-spacing: 0.03em;
+  font-size: 1.07rem;
+  letter-spacing: 0.02em;
+}
+
+/* スマホ対応：フッター */
+@media (max-width: 800px) {
+  .footer-inner {
+    padding: 0 6vw;
+    max-width: 98vw;
+  }
+  .footer-brand-row, .footer-menu-row, .footer-menu {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .footer-menu {
+    gap: 10px;
+    margin-right: 0;
+  }
+  .footer-site-title { font-size: 1rem;}
+  .footer-contact { font-size: 0.97rem; }
+}
+
+/* 会社概要 dl横並び */
+dl.company-info {
+  margin: 0;
+  width: 100%;
+  max-width: 550px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 14px rgba(20,30,60,0.08);
+  padding: 24px 18px 16px 18px;
+}
+dl.company-info .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+dl.company-info dt {
+  width: 110px;
+  font-weight: 700;
+  margin: 0;
+  flex-shrink: 0;
+  font-size: 1.18em;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+dl.company-info dd {
+  margin: 0;
+  flex: 1 1 0;
+  font-size: 1.13em;
+  color: var(--gray-text);
+  word-break: break-word;
 }
 @media (max-width: 600px) {
-  .footer-inner {
-    padding-left: 8px;
-    padding-right: 8px;
+  dl.company-info {
+    padding: 12px 3vw 10px 3vw;
+    font-size: 0.97em;
   }
-  .footer-brand-row,
-  .footer-contact,
-  .footer-menu {
+  dl.company-info .row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  dl.company-info dt,
+  dl.company-info dd {
     width: 100%;
-    justify-content: flex-start;
-    text-align: left;
+    font-size: 1em;
   }
-  .footer-menu {
-    justify-content: flex-start;
+  dl.company-info dt { margin-bottom: 2px;}
+}
+
+/* セクションの共通余白 */
+section {
+  margin: 38px auto 48px auto;
+  max-width: 900px;
+  padding: 0 2vw;
+}
+@media (max-width: 800px) {
+  section {
+    margin: 20px auto 28px auto;
+    padding: 0 4vw;
   }
 }
