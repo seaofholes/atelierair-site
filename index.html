@@ -7,128 +7,83 @@
   <meta name="description" content="有限会社ロイヤルライフは、不動産賃貸・管理、損害保険代理店、カルチャースクール、コンサート総合企画を行う会社です。"/>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1.1">
   <style>
-    :root {
-      --gold: #CAB774;
-      --navy: #23304A;
-      --white: #fff;
-      --beige: #FAEBD7;
-    }
-    html { font-size: 10px;}
-    body {
-      font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
-      background: #f8f8f8;
-      color: var(--navy);
-      margin: 0;
-      padding: 0;
-      font-size: 1.6rem;
-      line-height: 1.7;
-      box-sizing: border-box;
-    }
-    /* ヘッダー */
-    .header {
-      width: 100vw;
-      min-width: 0;
-      background: var(--navy);
-      box-shadow: 0 4px 12px rgba(30,40,60,.07);
-      z-index: 100;
-      min-height: 120px;
-      display: flex;
-      align-items: center;
-      padding: 0;
-    }
-    .nav-wrapper {
+    .kv-section {
       width: 100vw;
       max-width: 100vw;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0;
-      height: 100%;
-    }
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-left: 32px;
-    }
-    .site-icon {
-      height: 42px;
-      width: 42px;
-      object-fit: contain;
-      display: block;
-    }
-    .site-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--white); /* ← ゴールドから白へ */
-      letter-spacing: 0.14em;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      height: 42px;
-    }
-    .nav-menu {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin-right: 32px;
-      flex-wrap: wrap;
-    }
-    .nav-link {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 1.12rem;
-      font-weight: 500;
-      padding: 10px 12px;
-      border-radius: 6px;
-      transition: background .3s, color .3s;
-      white-space: nowrap;
-    }
-    .nav-link:hover, .nav-link.active {
-      background: var(--gold);
-      color: var(--navy);
-    }
-    /* キービジュアル */
-    .kv-section {
       background: url('img/topbackground.png') center/cover no-repeat;
-      min-height: 340px;
-      position: relative;
+      min-height: 210px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 80px 0 60px 0;
+      margin-bottom: 32px;
+      border-radius: 0;
       box-shadow: 0 8px 24px rgba(70, 70, 70, .08);
     }
     .kv-inner {
+      width: 100%;
       text-align: center;
-      color: var(--white);
+      color: #fff;
       text-shadow: 0 6px 32px rgba(0,0,0,0.28);
       z-index: 2;
+      padding: 48px 0 40px 0;
     }
     .kv-title {
-      font-size: 3.2rem;
+      font-size: 2.0rem;
       font-weight: 700;
-      margin-bottom: 16px;
+      margin-bottom: 0;
       letter-spacing: .14em;
+      line-height: 1.3;
     }
-    /* ギャラリー */
+    .main-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 0 60px 0;
+      background: #f8f8f8;
+      min-height: 60vh;
+    }
+    .main-box {
+      width: 100%;
+      max-width: 900px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(70,70,80,0.09);
+      padding: 44px 28px 38px 28px;
+      margin: 0 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .gallery-section {
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      margin-right: calc(50% - 50vw);
-      background: var(--white);
-      padding: 56px 0 24px 0;
+      width: 100%;
+      background: #fff;
+      padding: 36px 0 16px 0;
       box-shadow: 0 2px 14px rgba(20,30,60,0.08);
+      border-radius: 16px;
+      margin-bottom: 38px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .gallery-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #23304A;
+      letter-spacing: 0.1em;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      text-align: center;
     }
     .gallery-inner {
-      max-width: 900px;
+      max-width: 760px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      padding: 0 14px;
+      gap: 14px;
+      padding: 0 8px;
     }
     .gallery-inner img {
       width: 100%;
@@ -138,39 +93,67 @@
       box-shadow: 0 2px 8px rgba(20,30,60,0.08);
       background: #eee;
     }
-    /* サービス（事業内容） */
     .service-section {
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      margin-right: calc(50% - 50vw);
-      background: var(--white);
-      padding: 56px 0 40px 0;
+      width: 100%;
+      background: #fff;
+      padding: 36px 0 16px 0;
+      border-radius: 16px;
+      box-shadow: 0 2px 14px rgba(20,30,60,0.08);
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
     }
     .service-inner {
-      max-width: 900px;
+      width: 100%;
+      max-width: 620px;
       margin: 0 auto;
-      padding: 0 14px;
+      padding: 0 4vw;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
     .service-title {
-      font-size: 2.6rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      border-left: 6px solid var(--gold);
-      color: var(--navy);
+      border-left: 6px solid #CAB774;
+      color: #23304A;
       padding-left: 16px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       letter-spacing: 0.13em;
+      text-align: left;
     }
     .service-list {
-      font-size: 1.6rem;
+      font-size: 1.18rem;
       margin-bottom: 18px;
+      padding-left: 0;
+      list-style: none;
     }
     .service-list li {
       margin-bottom: 10px;
+      padding-left: 1.2em;
+      position: relative;
+    }
+    .service-list li:before {
+      content: "・";
+      position: absolute;
+      left: 0;
+      color: #CAB774;
+      font-size: 1.15em;
+      top: -1px;
     }
     .service-caption {
       color: #595959;
-      font-size: 1.3rem;
+      font-size: 1.07rem;
+      margin-top: 10px;
     }
+    @media (max-width: 900px) {
+      .gallery-inner { grid-template-columns: repeat(2, 1fr);}
+    }
+    @media (max-width: 600px) {
+      .gallery-inner { grid-template-columns: 1fr;}
+      .main-box { padding: 14px 2vw; }
+    }
+
     /* フッター */
     .footer {
       width: 100vw;
@@ -208,7 +191,7 @@
     .footer-site-title {
       font-size: 1.8rem;
       font-weight: 700;
-      color: var(--white); /* ← ゴールドから白へ */
+      color: var(--white);
       letter-spacing: 0.1em;
       margin-bottom: 10px;
     }
@@ -228,7 +211,7 @@
       margin-left: 0;
       align-items: center;
       flex-wrap: wrap;
-      justify-content: center;  /* 中央揃え */
+      justify-content: center;
       width: 100vw;
     }
     .footer-menu a {
@@ -240,7 +223,7 @@
       white-space: nowrap;
     }
     .footer-menu a:hover {
-      color: var(--white); /* 色変更しない */
+      color: var(--white);
       text-decoration: underline;
     }
     .footer-cookie {
@@ -286,7 +269,7 @@
     }
     .footer-policy-link a:hover {
       opacity: 1;
-      color: var(--white); /* 白のまま */
+      color: var(--white);
     }
     .footer-copy {
       margin-top: 8px;
@@ -296,36 +279,20 @@
       letter-spacing: 0.03em;
     }
     @media (max-width: 900px) {
-      .gallery-inner, .service-inner { max-width: 98vw; grid-template-columns: repeat(2, 1fr);}
       .footer-inner, .nav-wrapper { flex-direction: column; align-items: stretch; padding: 0;}
       .footer-brand, .logo-title { margin-left: 12px;}
       .footer-menu { margin-left: 0; justify-content: center; flex-wrap: wrap;}
       .nav-menu { margin-right: 12px;}
     }
     @media (max-width: 600px) {
-      .gallery-inner { grid-template-columns: 1fr;}
       .header, .footer, .footer-inner, .nav-wrapper { max-width: 100vw; padding-left: 0; padding-right: 0;}
       .footer-site-title { font-size: 1.15rem;}
       .footer-policy-link { font-size: 1rem;}
       .site-title { font-size: 1.2rem;}
-      .kv-title { font-size: 2.1rem;}
-      .service-title { font-size: 1.4rem;}
-      .gallery-section, .service-section { padding: 18px 0 18px 0;}
       .footer-contact { font-size: 1.0rem;}
-      .nav-menu {
-        flex-wrap: wrap;
-        gap: 6px;
-        font-size: 1rem;
-        margin-right: 4px;
-        width: 100vw;
-        justify-content: flex-end;
-      }
-      .nav-link {
-        padding: 7px 6px;
-        font-size: 0.99rem;
-      }
       .footer-menu { gap: 8px; }
     }
+
   </style>
 </head>
 <body>
@@ -346,38 +313,48 @@
     </div>
   </header>
   <!-- キービジュアル -->
-  <section class="kv-section">
+  <div class="kv-section">
     <div class="kv-inner">
       <div class="kv-title">地域とともに、安心と彩りを。</div>
     </div>
-  </section>
-  <!-- ギャラリー -->
-  <section class="gallery-section">
-    <div class="gallery-inner">
-      <img src="img/rgv02.jpg" alt="写真1">
-      <img src="img/rs07.jpg" alt="写真2">
-      <img src="img/sjun09.jpg" alt="写真3">
-      <img src="img/ikeda03.jpg" alt="写真4">
-      <img src="img/LM.jpg" alt="写真5">
-      <img src="img/senri05.jpg" alt="写真6">
-      <img src="img/fto2.jpg" alt="写真7">
-      <img src="img/btun5.jpg" alt="写真8">
-      <img src="img/GK1.png" alt="写真9">
-    </div>
-  </section>
-  <!-- 事業紹介 -->
-  <section class="service-section">
-    <div class="service-inner">
-      <h2 class="service-title">主な事業</h2>
-      <ul class="service-list">
-        <li>不動産賃貸および管理</li>
-        <li>損害保険代理店</li>
-        <li>カルチャースクール</li>
-        <li>コンサート総合企画</li>
-      </ul>
-      <div class="service-caption">損害保険やピアノ常設スタジオの運営も行っております。お気軽にご相談ください。</div>
-    </div>
-  </section>
+  </div>
+  <!-- 本文 -->
+  <main>
+    <section class="main-section">
+      <div class="main-box">
+        <!-- ギャラリー -->
+        <div class="gallery-section">
+          <div class="gallery-inner">
+            <img src="img/rgv02.jpg" alt="写真1">
+            <img src="img/rs07.jpg" alt="写真2">
+            <img src="img/sjun09.jpg" alt="写真3">
+            <img src="img/ikeda03.jpg" alt="写真4">
+            <img src="img/LM.jpg" alt="写真5">
+            <img src="img/senri05.jpg" alt="写真6">
+            <img src="img/fto2.jpg" alt="写真7">
+            <img src="img/btun5.jpg" alt="写真8">
+            <img src="img/GK1.png" alt="写真9">
+          </div>
+          <h2 class="gallery-title">ギャラリー</h2>
+        </div>
+        <!-- 事業紹介 -->
+        <div class="service-section">
+          <div class="service-inner">
+            <h2 class="service-title">主な事業</h2>
+            <ul class="service-list">
+              <li>不動産賃貸および管理</li>
+              <li>損害保険代理店</li>
+              <li>カルチャースクール</li>
+              <li>コンサート総合企画</li>
+            </ul>
+            <div class="service-caption">
+              損害保険やピアノ常設スタジオの運営も行っております。お気軽にご相談ください。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <!-- フッター -->
   <footer class="footer">
     <div class="footer-inner">
