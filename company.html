@@ -11,24 +11,23 @@
    
 
 /* 本文 */
-.main-section {
-  width: 100vw;
-  min-height: 60vh;
-  display: flex;
-  justify-content: center; /* 中央揃え */
-  align-items: flex-start;
-  background: var(--white);
-  padding: 54px 0 54px 0;
-}
-.company-inner {
-  max-width: 680px;
-  width: 100%;
+    .main-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 0 60px 0;
+      background: #f8f8f8;
+      min-height: 60vh;
+    }
+    .main-box {
+      width: 100%;
+      max-width: 680px;
       background: #fff;
       border-radius: 18px;
       box-shadow: 0 2px 16px rgba(70,70,80,0.09);
       padding: 44px 28px 38px 28px;
       margin: 0 8px;
-}
+    }
 .company-title {
       font-size: 2.3rem;
       font-weight: 700;
@@ -45,7 +44,6 @@
   margin: 0 auto;
   margin-bottom: 0;
   font-size: 1.18rem;
-  background: var(--white);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: none;
@@ -222,8 +220,8 @@
       </div>
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">トップページ</a>
-        <a href="company.html" class="nav-link">会社概要</a>
-        <a href="properties.html" class="nav-link active">物件情報</a>
+        <a href="company.html" class="nav-link active">会社概要</a>
+        <a href="properties.html" class="nav-link">物件情報</a>
         <a href="news.html" class="nav-link">ニュース</a>
         <a href="contact.html" class="nav-link">お問い合わせ</a>
       </nav>
@@ -235,6 +233,7 @@
 
   <!-- 本文 -->
   <section class="main-section">
+      <div class="main-box">
     <div class="company-inner">
       <h1 class="company-title">会社概要</h1>
       <table class="company-info-table">
@@ -277,7 +276,8 @@
           </td>
         </tr>
       </table>
-    </div>
+      </div>
+       </div>
   </section>
 
   <!-- フッター -->
