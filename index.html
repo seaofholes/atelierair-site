@@ -5,7 +5,7 @@
   <title>有限会社ロイヤルライフ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="有限会社ロイヤルライフは、不動産賃貸・管理、損害保険代理店、カルチャースクール、コンサート総合企画を行う会社です。"/>
-  <!-- Google Fonts Montserrat & Noto Sans JP -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -23,58 +23,74 @@
       padding: 0;
       font-size: 1.6rem;
       line-height: 1.7;
+      box-sizing: border-box;
     }
+    /* ヘッダー */
     .header {
-      width: 100%;
+      width: 100vw;
+      min-width: 0;
       background: var(--navy);
       box-shadow: 0 4px 12px rgba(30,40,60,.07);
       z-index: 100;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      padding: 0;
     }
     .nav-wrapper {
-      max-width: 1240px;
-      margin: 0 auto;
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 32px;
-      height: 70px;
+      padding: 0;
+      height: 100%;
     }
     .logo-title {
       display: flex;
       align-items: center;
       gap: 12px;
+      margin-left: 32px;
     }
     .site-icon {
-      height: 32px;
-      width: 32px;
+      height: 42px;
+      width: 42px;
       object-fit: contain;
       display: block;
     }
     .site-title {
       font-size: 2.2rem;
       font-weight: 700;
-      color: var(--white);
+      color: var(--gold);
       letter-spacing: 0.14em;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      height: 42px;
     }
     .nav-menu {
       display: flex;
       gap: 12px;
       align-items: center;
+      margin-right: 32px;
+      flex-wrap: wrap;
     }
     .nav-link {
       color: var(--white);
       text-decoration: none;
-      font-size: 1.6rem;
-      font-weight: 600;
-      padding: 10px 18px;
+      font-size: 1.12rem;
+      font-weight: 500;
+      padding: 10px 12px;
       border-radius: 6px;
       transition: background .3s, color .3s;
+      white-space: nowrap;
     }
     .nav-link:hover, .nav-link.active {
       background: var(--gold);
       color: var(--navy);
     }
-    /* KV */
+    /* キービジュアル */
     .kv-section {
       background: url('img/topbackground.png') center/cover no-repeat;
       min-height: 340px;
@@ -97,12 +113,7 @@
       margin-bottom: 16px;
       letter-spacing: .14em;
     }
-    .kv-caption {
-      font-size: 1.5rem;
-      margin-bottom: 18px;
-    }
-
-    /* ギャラリー（9枚） */
+    /* ギャラリー */
     .gallery-section {
       width: 100vw;
       margin-left: calc(50% - 50vw);
@@ -127,7 +138,6 @@
       box-shadow: 0 2px 8px rgba(20,30,60,0.08);
       background: #eee;
     }
-
     /* サービス（事業内容） */
     .service-section {
       width: 100vw;
@@ -161,59 +171,75 @@
       color: #595959;
       font-size: 1.3rem;
     }
-
     /* フッター */
     .footer {
-      width: 100%;
+      width: 100vw;
       background: var(--navy);
       color: var(--white);
       padding: 36px 0 18px 0;
       margin-top: 0;
     }
     .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       align-items: flex-start;
-      padding: 0 20px;
+      padding: 0;
+      flex-wrap: wrap;
     }
     .footer-brand {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
+      margin-left: 32px;
+    }
+    .footer-icon {
+      height: 32px;
+      width: 32px;
+      object-fit: contain;
+      display: block;
+    }
+    .footer-brand-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
     .footer-site-title {
       font-size: 1.8rem;
       font-weight: 700;
       color: var(--gold);
       letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .footer-contact {
+      font-size: 1.15rem;
+      color: var(--white);
+      line-height: 1.7;
+      margin: 0 0 10px 0;
+      padding-bottom: 0;
+      text-align: left;
+      display: block;
+      word-break: break-all;
     }
     .footer-menu {
       display: flex;
       gap: 18px;
-      margin-left: 18px;
+      margin-left: 32px;
       align-items: center;
       flex-wrap: wrap;
     }
     .footer-menu a {
       color: var(--white);
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: color .3s;
+      font-weight: 500;
+      white-space: nowrap;
     }
     .footer-menu a:hover {
       color: var(--gold);
       text-decoration: underline;
-    }
-    .footer-contact {
-      font-size: 1.2rem;
-      text-align: right;
-      color: var(--white);
-      line-height: 1.8;
-      margin-left: 24px;
-      min-width: 210px;
     }
     .footer-cookie {
       background: none;
@@ -244,32 +270,58 @@
       font-weight: bold;
       color: var(--gold);
     }
+    .footer-policy-link {
+      text-align: center;
+      margin: 18px 0 0 0;
+      font-size: 1.1rem;
+    }
+    .footer-policy-link a {
+      color: var(--white);
+      opacity: 0.75;
+      font-size: 1.1rem;
+      text-decoration: underline;
+      transition: opacity .3s;
+    }
+    .footer-policy-link a:hover {
+      opacity: 1;
+      color: var(--gold);
+    }
     .footer-copy {
-      margin-top: 24px;
+      margin-top: 8px;
       text-align: center;
       color: var(--gold);
       font-size: 1.2rem;
       letter-spacing: 0.03em;
     }
     @media (max-width: 900px) {
-      .gallery-inner, .service-inner {
-        max-width: 98vw;
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 10px;
-      }
-      .footer-contact { margin-top: 12px;}
+      .gallery-inner, .service-inner { max-width: 98vw; grid-template-columns: repeat(2, 1fr);}
+      .footer-inner, .nav-wrapper { flex-direction: column; align-items: stretch; padding: 0;}
+      .footer-brand, .logo-title { margin-left: 12px;}
+      .footer-menu { margin-left: 12px; justify-content: flex-start; flex-wrap: wrap;}
+      .nav-menu { margin-right: 12px;}
     }
     @media (max-width: 600px) {
-      .gallery-inner {
-        grid-template-columns: 1fr;
-      }
-      .kv-title { font-size: 2.1rem;}
-      .site-title { font-size: 1.4rem;}
+      .gallery-inner { grid-template-columns: 1fr;}
+      .header, .footer, .footer-inner, .nav-wrapper { max-width: 100vw; padding-left: 0; padding-right: 0;}
       .footer-site-title { font-size: 1.15rem;}
+      .footer-policy-link { font-size: 1rem;}
+      .site-title { font-size: 1.2rem;}
+      .kv-title { font-size: 2.1rem;}
+      .service-title { font-size: 1.4rem;}
+      .gallery-section, .service-section { padding: 18px 0 18px 0;}
+      .footer-contact { font-size: 1.0rem;}
+      .nav-menu {
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 1rem;
+        margin-right: 4px;
+        width: 100vw;
+        justify-content: flex-end;
+      }
+      .nav-link {
+        padding: 7px 6px;
+        font-size: 0.99rem;
+      }
     }
   </style>
 </head>
@@ -287,18 +339,15 @@
         <a href="properties.html" class="nav-link">物件情報</a>
         <a href="news.html" class="nav-link">ニュース</a>
         <a href="contact.html" class="nav-link">お問い合わせ</a>
-        <a href="privacy.html" class="nav-link">プライバシーポリシー</a>
       </nav>
     </div>
   </header>
-
   <!-- キービジュアル -->
   <section class="kv-section">
     <div class="kv-inner">
       <div class="kv-title">地域とともに、安心と彩りを。</div>
     </div>
   </section>
-
   <!-- ギャラリー -->
   <section class="gallery-section">
     <div class="gallery-inner">
@@ -313,7 +362,6 @@
       <img src="img/GK1.png" alt="写真9">
     </div>
   </section>
-
   <!-- 事業紹介 -->
   <section class="service-section">
     <div class="service-inner">
@@ -327,27 +375,27 @@
       <div class="service-caption">損害保険やピアノ常設スタジオの運営も行っております。お気軽にご相談ください。</div>
     </div>
   </section>
-
   <!-- フッター -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="site-icon">
-        <span class="footer-site-title">有限会社ロイヤルライフ</span>
-        <nav class="footer-menu">
-          <a href="index.html">トップページ</a>
-          <a href="company.html">会社概要</a>
-          <a href="properties.html">物件情報</a>
-          <a href="news.html">ニュース</a>
-          <a href="contact.html">お問い合わせ</a>
-          <a href="privacy.html">プライバシーポリシー</a>
-        </nav>
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="footer-icon">
+        <div class="footer-brand-block">
+          <span class="footer-site-title">有限会社ロイヤルライフ</span>
+          <div class="footer-contact">
+            06-6872-7040<br>
+            営業時間：10:00～17:00<br>
+            大阪府豊中市上新田3丁目6-17
+          </div>
+        </div>
       </div>
-      <div class="footer-contact">
-        <div>06-6872-7040</div>
-        <div>営業時間：10:00～17:00</div>
-        <div>大阪府豊中市上新田3丁目6-17</div>
-      </div>
+      <nav class="footer-menu">
+        <a href="index.html">トップページ</a>
+        <a href="company.html">会社概要</a>
+        <a href="properties.html">物件情報</a>
+        <a href="news.html">ニュース</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
     </div>
     <div class="footer-cookie">
       <span>Cookieの取得と利用に同意をお願いします。</span>
@@ -355,11 +403,13 @@
       <button id="cookie-reject">拒否</button>
       <span id="cookie-status"></span>
     </div>
+    <div class="footer-policy-link">
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
     <div class="footer-copy">
       Copyright © 2025 有限会社ロイヤルライフ All rights Reserved.
     </div>
   </footer>
-
   <!-- Cookie同意JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {

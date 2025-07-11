@@ -4,270 +4,53 @@
   <meta charset="utf-8"/>
   <title>お問い合わせ | 有限会社ロイヤルライフ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="有限会社ロイヤルライフへのお問い合わせページです。不動産賃貸・管理・カルチャースクールなどご質問はお気軽にご連絡ください。"/>
-  <!-- Google Fonts Montserrat & Noto Sans JP -->
+  <meta name="description" content="有限会社ロイヤルライフへのお問い合わせページです。"/>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --gold: #CAB774;
-      --navy: #23304A;
-      --white: #fff;
-      --beige: #FAEBD7;
-    }
+    :root { --gold: #CAB774; --navy: #23304A; --white: #fff; --beige: #FAEBD7;}
     html { font-size: 10px;}
-    body {
-      font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
-      background: #f8f8f8;
-      color: var(--navy);
-      margin: 0;
-      padding: 0;
-      font-size: 1.6rem;
-      line-height: 1.7;
-    }
-    .header {
-      width: 100%;
-      background: var(--navy);
-      box-shadow: 0 4px 12px rgba(30,40,60,.07);
-      z-index: 100;
-    }
-    .nav-wrapper {
-      max-width: 1240px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 32px;
-      height: 70px;
-    }
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .site-icon {
-      height: 32px;
-      width: 32px;
-      object-fit: contain;
-      display: block;
-    }
-    .site-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: 0.14em;
-    }
-    .nav-menu {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-    .nav-link {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 1.6rem;
-      font-weight: 600;
-      padding: 10px 18px;
-      border-radius: 6px;
-      transition: background .3s, color .3s;
-    }
-    .nav-link:hover, .nav-link.active {
-      background: var(--gold);
-      color: var(--navy);
-    }
-
-    /* 問い合わせフォーム */
-    .contact-section {
-      max-width: 620px;
-      margin: 48px auto 60px auto;
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: 0 2px 16px rgba(70,70,80,0.10);
-      padding: 36px 32px 32px 32px;
-    }
-    .contact-title {
-      font-size: 2.6rem;
-      font-weight: 700;
-      letter-spacing: 0.13em;
-      color: var(--navy);
-      border-left: 6px solid var(--gold);
-      padding-left: 16px;
-      margin-bottom: 24px;
-    }
-    .contact-caption {
-      font-size: 1.35rem;
-      color: #4e4e4e;
-      margin-bottom: 24px;
-    }
-    .contact-form label {
-      display: block;
-      margin-top: 14px;
-      font-weight: 600;
-      font-size: 1.4rem;
-      color: var(--navy);
-    }
-    .contact-form input, .contact-form textarea, .contact-form select {
-      width: 100%;
-      padding: 10px 8px;
-      border-radius: 7px;
-      border: 1px solid #cab7746c;
-      font-size: 1.5rem;
-      font-family: inherit;
-      margin-top: 4px;
-      margin-bottom: 6px;
-      box-sizing: border-box;
-      background: #faf7ed;
-    }
-    .contact-form textarea {
-      min-height: 90px;
-      resize: vertical;
-    }
-    .contact-form .required {
-      color: #e74c3c;
-      font-size: 1.1rem;
-      margin-left: 6px;
-    }
-    .contact-form button {
-      margin-top: 18px;
-      background: var(--gold);
-      color: var(--navy);
-      font-size: 1.7rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 8px;
-      padding: 12px 0;
-      width: 100%;
-      cursor: pointer;
-      transition: background .3s, color .3s;
-      box-shadow: 0 2px 10px rgba(230,210,150,0.08);
-    }
-    .contact-form button:hover {
-      background: var(--navy);
-      color: var(--gold);
-    }
-    .contact-note {
-      margin-top: 22px;
-      font-size: 1.15rem;
-      color: #575757;
-      text-align: left;
-    }
+    body { font-family: 'Montserrat', 'Noto Sans JP', sans-serif; background: #f8f8f8; color: var(--navy); margin: 0; padding: 0; font-size: 1.6rem; line-height: 1.7; box-sizing: border-box;}
+    .header { width: 100vw; min-width: 0; background: var(--navy); box-shadow: 0 4px 12px rgba(30,40,60,.07); z-index: 100; min-height: 120px; display: flex; align-items: center; padding: 0;}
+    .nav-wrapper { width: 100vw; max-width: 100vw; margin: 0; display: flex; align-items: center; justify-content: space-between; padding: 0; height: 100%;}
+    .logo-title { display: flex; align-items: center; gap: 12px; margin-left: 32px;}
+    .site-icon { height: 42px; width: 42px; object-fit: contain; display: block;}
+    .site-title { font-size: 2.2rem; font-weight: 700; color: var(--gold); letter-spacing: 0.14em; line-height: 1; display: flex; align-items: center; height: 42px;}
+    .nav-menu { display: flex; gap: 12px; align-items: center; margin-right: 32px; flex-wrap: wrap;}
+    .nav-link { color: var(--white); text-decoration: none; font-size: 1.12rem; font-weight: 500; padding: 10px 12px; border-radius: 6px; transition: background .3s, color .3s; white-space: nowrap;}
+    .nav-link:hover, .nav-link.active { background: var(--gold); color: var(--navy);}
+    .contact-section { max-width: 700px; background: var(--white); margin: 48px auto 48px auto; border-radius: 16px; box-shadow: 0 2px 16px rgba(70,70,80,0.10); padding: 40px 32px 36px 32px;}
+    .contact-title { font-size: 2.6rem; font-weight: 700; color: var(--navy); letter-spacing: 0.13em; border-left: 6px solid var(--gold); padding-left: 16px; margin-bottom: 28px;}
+    .contact-caption { color: #595959; font-size: 1.3rem; margin-bottom: 28px;}
+    .contact-form label { font-size: 1.35rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; display: block;}
+    .contact-form input, .contact-form textarea { width: 100%; font-size: 1.35rem; padding: 8px 10px; border-radius: 5px; border: 1px solid #CFCFCF; margin-bottom: 16px; box-sizing: border-box;}
+    .contact-form textarea { min-height: 80px; }
+    .contact-form button { background: var(--gold); color: var(--navy); font-weight: 700; border: none; border-radius: 6px; padding: 10px 32px; font-size: 1.35rem; margin-top: 10px; cursor: pointer; transition: background .3s;}
+    .contact-form button:hover { background: var(--navy); color: var(--gold);}
     @media (max-width: 600px) {
-      .contact-section { padding: 14px 2vw; }
-      .contact-title { font-size: 1.7rem; }
+      .contact-section { padding: 18px 2vw;}
+      .contact-title { font-size: 1.4rem;}
     }
-
-    /* フッターはトップページのまま */
-    .footer {
-      width: 100%;
-      background: var(--navy);
-      color: var(--white);
-      padding: 36px 0 18px 0;
-      margin-top: 0;
-    }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 0 20px;
-    }
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .footer-site-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 0.1em;
-    }
-    .footer-menu {
-      display: flex;
-      gap: 18px;
-      margin-left: 18px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .footer-menu a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: color .3s;
-    }
-    .footer-menu a:hover {
-      color: var(--gold);
-      text-decoration: underline;
-    }
-    .footer-contact {
-      font-size: 1.2rem;
-      text-align: right;
-      color: var(--white);
-      line-height: 1.8;
-      margin-left: 24px;
-      min-width: 210px;
-    }
-    .footer-cookie {
-      background: none;
-      text-align: center;
-      margin: 18px auto 0 auto;
-      padding: 12px 0 0 0;
-      font-size: 1.1rem;
-      color: var(--white);
-    }
-    .footer-cookie button {
-      margin: 0 8px;
-      padding: 5px 16px;
-      border-radius: 6px;
-      border: none;
-      font-size: 1rem;
-      background: var(--gold);
-      color: var(--navy);
-      font-weight: 600;
-      cursor: pointer;
-      transition: background .3s, color .3s;
-    }
-    .footer-cookie button:hover {
-      background: var(--beige);
-      color: var(--navy);
-    }
-    #cookie-status {
-      margin-left: 16px;
-      font-weight: bold;
-      color: var(--gold);
-    }
-    .footer-copy {
-      margin-top: 24px;
-      text-align: center;
-      color: var(--gold);
-      font-size: 1.2rem;
-      letter-spacing: 0.03em;
-    }
-    @media (max-width: 900px) {
-      .footer-inner { flex-direction: column; align-items: flex-start; padding: 0 10px; }
-      .footer-contact { margin-top: 12px;}
-    }
-    @media (max-width: 600px) {
-      .footer-site-title { font-size: 1.15rem;}
-    }
+    /* フッター（同じ） */
+    .footer { width: 100vw; background: var(--navy); color: var(--white); padding: 36px 0 18px 0; margin-top: 0;}
+    .footer-inner { width: 100vw; max-width: 100vw; margin: 0; display: flex; align-items: flex-start; padding: 0; flex-wrap: wrap;}
+    .footer-brand { display: flex; align-items: flex-start; gap: 12px; margin-left: 32px;}
+    .footer-icon { height: 32px; width: 32px; object-fit: contain; display: block;}
+    .footer-brand-block { display: flex; flex-direction: column; align-items: flex-start;}
+    .footer-site-title { font-size: 1.8rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 10px;}
+    .footer-contact { font-size: 1.15rem; color: var(--white); line-height: 1.7; margin: 0 0 10px 0; padding-bottom: 0; text-align: left; display: block; word-break: break-all;}
+    .footer-menu { display: flex; gap: 18px; margin-left: 32px; align-items: center; flex-wrap: wrap;}
+    .footer-menu a { color: var(--white); text-decoration: none; font-size: 1.1rem; transition: color .3s; font-weight: 500; white-space: nowrap;}
+    .footer-menu a:hover { color: var(--gold); text-decoration: underline;}
+    .footer-cookie { background: none; text-align: center; margin: 18px auto 0 auto; padding: 12px 0 0 0; font-size: 1.1rem; color: var(--white);}
+    .footer-cookie button { margin: 0 8px; padding: 5px 16px; border-radius: 6px; border: none; font-size: 1rem; background: var(--gold); color: var(--navy); font-weight: 600; cursor: pointer; transition: background .3s, color .3s;}
+    .footer-cookie button:hover { background: var(--beige); color: var(--navy);}
+    #cookie-status { margin-left: 16px; font-weight: bold; color: var(--gold);}
+    .footer-policy-link { text-align: center; margin: 18px 0 0 0; font-size: 1.1rem;}
+    .footer-policy-link a { color: var(--white); opacity: 0.75; font-size: 1.1rem; text-decoration: underline; transition: opacity .3s;}
+    .footer-policy-link a:hover { opacity: 1; color: var(--gold);}
+    .footer-copy { margin-top: 8px; text-align: center; color: var(--gold); font-size: 1.2rem; letter-spacing: 0.03em;}
   </style>
-  <script>
-    // フロントバリデーション
-    function validateContactForm(e) {
-      var name = document.getElementById('name');
-      var email = document.getElementById('email');
-      var body = document.getElementById('message');
-      var err = [];
-      if(!name.value) err.push('お名前');
-      if(!email.value.match(/^[\w\-\.]+@[\w\-]+\.[\w\-\.]+$/)) err.push('メールアドレス');
-      if(!body.value) err.push('お問い合わせ内容');
-      if(err.length > 0){
-        alert(err.join('、') + 'を入力してください。');
-        e.preventDefault();
-      }
-    }
-  </script>
 </head>
 <body>
   <!-- ヘッダー -->
@@ -283,66 +66,61 @@
         <a href="properties.html" class="nav-link">物件情報</a>
         <a href="news.html" class="nav-link">ニュース</a>
         <a href="contact.html" class="nav-link active">お問い合わせ</a>
-        <a href="privacy.html" class="nav-link">プライバシーポリシー</a>
       </nav>
     </div>
   </header>
-
-  <!-- お問い合わせフォーム -->
+  <!-- お問い合わせ本文 -->
   <section class="contact-section">
     <h1 class="contact-title">お問い合わせ</h1>
     <div class="contact-caption">
-      不動産の賃貸・管理、カルチャースクール、コンサート企画など、<br>
-      各種ご質問・ご相談は下記フォームよりお気軽にご連絡ください。<br>
-      <span style="color:#8c8c8c;font-size:1.15rem;">（営業時間：10:00～17:00／不定休）</span>
+      物件の空き状況や管理・保険・カルチャースクール等に関するご質問など、下記フォームよりお気軽にご連絡ください。
     </div>
-    <form class="contact-form" method="post" action="#" onsubmit="validateContactForm(event)">
-      <label for="name">お名前<span class="required">必須</span></label>
-      <input type="text" id="name" name="name" autocomplete="name" required>
+    <form class="contact-form" action="#" method="post" autocomplete="off">
+      <label for="name">お名前 <span style="color:var(--gold);">*</span></label>
+      <input type="text" id="name" name="name" required>
 
-      <label for="email">メールアドレス<span class="required">必須</span></label>
-      <input type="email" id="email" name="email" autocomplete="email" required>
+      <label for="email">メールアドレス <span style="color:var(--gold);">*</span></label>
+      <input type="email" id="email" name="email" required>
 
       <label for="tel">電話番号</label>
-      <input type="tel" id="tel" name="tel" autocomplete="tel">
+      <input type="tel" id="tel" name="tel" placeholder="（任意）">
 
-      <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+      <label for="message">お問い合わせ内容 <span style="color:var(--gold);">*</span></label>
       <textarea id="message" name="message" required></textarea>
-
+      
       <button type="submit">送信</button>
     </form>
-    <div class="contact-note">
-      お急ぎの場合はお電話（06-6872-7040）までご連絡ください。<br>
-      個人情報のお取扱いについては <a href="privacy.html" style="color:var(--gold);text-decoration:underline;">プライバシーポリシー</a> をご参照ください。
-    </div>
   </section>
-
   <!-- フッター -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="site-icon">
-        <span class="footer-site-title">有限会社ロイヤルライフ</span>
-        <nav class="footer-menu">
-          <a href="index.html">トップページ</a>
-          <a href="company.html">会社概要</a>
-          <a href="properties.html">物件情報</a>
-          <a href="news.html">ニュース</a>
-          <a href="contact.html">お問い合わせ</a>
-          <a href="privacy.html">プライバシーポリシー</a>
-        </nav>
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="footer-icon">
+        <div class="footer-brand-block">
+          <span class="footer-site-title">有限会社ロイヤルライフ</span>
+          <div class="footer-contact">
+            06-6872-7040<br>
+            営業時間：10:00～17:00<br>
+            大阪府豊中市上新田3丁目6-17
+          </div>
+        </div>
       </div>
-      <div class="footer-contact">
-        <div>06-6872-7040</div>
-        <div>営業時間：10:00～17:00</div>
-        <div>大阪府豊中市上新田3丁目6-17</div>
-      </div>
+      <nav class="footer-menu">
+        <a href="index.html">トップページ</a>
+        <a href="company.html">会社概要</a>
+        <a href="properties.html">物件情報</a>
+        <a href="news.html">ニュース</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
     </div>
     <div class="footer-cookie">
       <span>Cookieの取得と利用に同意をお願いします。</span>
       <button id="cookie-accept">同意</button>
       <button id="cookie-reject">拒否</button>
       <span id="cookie-status"></span>
+    </div>
+    <div class="footer-policy-link">
+      <a href="privacy.html">プライバシーポリシー</a>
     </div>
     <div class="footer-copy">
       Copyright © 2025 有限会社ロイヤルライフ All rights Reserved.
