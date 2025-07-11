@@ -62,7 +62,7 @@
     .site-title {
       font-size: 2.2rem;
       font-weight: 700;
-      color: var(--gold);
+      color: var(--white); /* ← ゴールドから白へ */
       letter-spacing: 0.14em;
       line-height: 1;
       display: flex;
@@ -208,15 +208,15 @@
     .footer-site-title {
       font-size: 1.8rem;
       font-weight: 700;
-      color: var(--gold);
+      color: var(--white); /* ← ゴールドから白へ */
       letter-spacing: 0.1em;
       margin-bottom: 10px;
     }
     .footer-contact {
       font-size: 1.15rem;
       color: var(--white);
-      line-height: 1.7;
-      margin: 0 0 10px 0;
+      line-height: 1.4;
+      margin: 8px 0 10px 0;
       padding-bottom: 0;
       text-align: left;
       display: block;
@@ -225,20 +225,22 @@
     .footer-menu {
       display: flex;
       gap: 18px;
-      margin-left: 32px;
+      margin-left: 0;
       align-items: center;
       flex-wrap: wrap;
+      justify-content: center;  /* 中央揃え */
+      width: 100vw;
     }
     .footer-menu a {
       color: var(--white);
       text-decoration: none;
       font-size: 1.1rem;
-      transition: color .3s;
+      transition: none;
       font-weight: 500;
       white-space: nowrap;
     }
     .footer-menu a:hover {
-      color: var(--gold);
+      color: var(--white); /* 色変更しない */
       text-decoration: underline;
     }
     .footer-cookie {
@@ -284,7 +286,7 @@
     }
     .footer-policy-link a:hover {
       opacity: 1;
-      color: var(--gold);
+      color: var(--white); /* 白のまま */
     }
     .footer-copy {
       margin-top: 8px;
@@ -297,7 +299,7 @@
       .gallery-inner, .service-inner { max-width: 98vw; grid-template-columns: repeat(2, 1fr);}
       .footer-inner, .nav-wrapper { flex-direction: column; align-items: stretch; padding: 0;}
       .footer-brand, .logo-title { margin-left: 12px;}
-      .footer-menu { margin-left: 12px; justify-content: flex-start; flex-wrap: wrap;}
+      .footer-menu { margin-left: 0; justify-content: center; flex-wrap: wrap;}
       .nav-menu { margin-right: 12px;}
     }
     @media (max-width: 600px) {
@@ -322,6 +324,7 @@
         padding: 7px 6px;
         font-size: 0.99rem;
       }
+      .footer-menu { gap: 8px; }
     }
   </style>
 </head>
@@ -383,8 +386,8 @@
         <div class="footer-brand-block">
           <span class="footer-site-title">有限会社ロイヤルライフ</span>
           <div class="footer-contact">
+            〒560-0085<br>
             06-6872-7040<br>
-            営業時間：10:00～17:00<br>
             大阪府豊中市上新田3丁目6-17
           </div>
         </div>
