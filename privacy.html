@@ -22,10 +22,12 @@
       padding: 0;
       font-size: 1.6rem;
       line-height: 1.7;
+      box-sizing: border-box;
     }
     /* ヘッダー */
     .header {
       width: 100vw;
+      min-width: 0;
       background: var(--navy);
       box-shadow: 0 4px 12px rgba(30,40,60,.07);
       z-index: 100;
@@ -41,7 +43,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 0;
+      padding: 0;
       height: 100%;
     }
     .logo-title {
@@ -71,21 +73,23 @@
       gap: 12px;
       align-items: center;
       margin-right: 32px;
+      flex-wrap: wrap;
     }
     .nav-link {
       color: var(--white);
       text-decoration: none;
-      font-size: 1.12rem; /* 0.7倍に */
+      font-size: 1.12rem;
       font-weight: 500;
       padding: 10px 12px;
       border-radius: 6px;
       transition: background .3s, color .3s;
+      white-space: nowrap;
     }
     .nav-link:hover, .nav-link.active {
       background: var(--gold);
       color: var(--navy);
     }
-    /* プライバシーポリシー本体 */
+    /* 本文 */
     .policy-section {
       max-width: 720px;
       margin: 48px auto 60px auto;
@@ -93,6 +97,7 @@
       border-radius: 16px;
       box-shadow: 0 2px 16px rgba(70,70,80,0.10);
       padding: 36px 32px 36px 32px;
+      box-sizing: border-box;
     }
     .policy-title {
       font-size: 2.6rem;
@@ -131,13 +136,9 @@
       border-left: 4px solid var(--gold);
       padding: 14px 18px;
       border-radius: 8px;
+      overflow-wrap: anywhere;
     }
-    @media (max-width: 600px) {
-      .policy-section { padding: 14px 2vw; }
-      .policy-title { font-size: 1.7rem; }
-      .policy-section h2 { font-size: 1.2rem;}
-    }
-    /* フッター（共通） */
+    /* フッター */
     .footer {
       width: 100vw;
       background: var(--navy);
@@ -186,6 +187,7 @@
       padding-bottom: 0;
       text-align: left;
       display: block;
+      word-break: break-all;
     }
     .footer-menu {
       display: flex;
@@ -200,6 +202,7 @@
       font-size: 1.1rem;
       transition: color .3s;
       font-weight: 500;
+      white-space: nowrap;
     }
     .footer-menu a:hover {
       color: var(--gold);
@@ -258,14 +261,31 @@
       letter-spacing: 0.03em;
     }
     @media (max-width: 900px) {
-      .footer-inner { flex-direction: column; align-items: flex-start; }
-      .footer-brand { margin-left: 12px;}
-      .footer-menu { margin-left: 12px;}
+      .policy-section { max-width: 96vw; padding: 22px 2vw 28px 2vw; }
+      .footer-inner, .nav-wrapper { flex-direction: column; align-items: stretch; padding: 0; }
+      .footer-brand, .logo-title { margin-left: 12px;}
+      .footer-menu { margin-left: 12px; justify-content: flex-start; flex-wrap: wrap;}
+      .nav-menu { margin-right: 12px; }
     }
     @media (max-width: 600px) {
       .header, .footer, .footer-inner, .nav-wrapper { max-width: 100vw; padding-left: 0; padding-right: 0;}
       .footer-site-title { font-size: 1.15rem;}
       .footer-policy-link { font-size: 1rem;}
+      .site-title { font-size: 1.2rem; }
+      .policy-title { font-size: 1.35rem; }
+      .policy-section { padding: 10px 2vw; }
+      .nav-menu {
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 1rem;
+        margin-right: 4px;
+        width: 100vw;
+        justify-content: flex-end;
+      }
+      .nav-link {
+        padding: 7px 6px;
+        font-size: 0.99rem;
+      }
     }
   </style>
 </head>
@@ -333,7 +353,7 @@
           <span class="footer-site-title">有限会社ロイヤルライフ</span>
           <div class="footer-contact">
             06-6872-7040<br>
-            〒560-0085<br>
+            営業時間：10:00～17:00<br>
             大阪府豊中市上新田3丁目6-17
           </div>
         </div>
